@@ -31,6 +31,8 @@ class Solution:
         for i in range(len(nums)):
             # 计算需要找到的下一个目标数字
             res = target-nums[i]
+            print(res)
+            print(i)
                 # 遍历剩下的元素，查找是否存在该数字
             if res in nums[i+1:]:
                 # 若存在，返回答案。这里由于是两数之和，可采用.index()方法
