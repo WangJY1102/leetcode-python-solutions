@@ -1,7 +1,7 @@
 from typing import List
 
 class Solution:
-    def twoSum2(self, numbers: List[int], target: int) -> List[int]:
+    def twoSumii(self, numbers: List[int], target: int) -> List[int]:
         """
         有序列表，两数之和
         初始时两个指针分别指向第一个元素位置和最后一个元素的位置。
@@ -28,7 +28,7 @@ class Solution:
                 return [low + 1, high + 1]
         return [-1, -1]
 
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+    def twoSumii2(self, numbers: List[int], target: int) -> List[int]:
         """
         二分法，同样应用双指针
         时间复杂度：O(nlogn)
@@ -53,5 +53,5 @@ class Solution:
 if __name__ == "__main__":
     nums = list(map(int, input("请输出数组（空格分格）：").split()))
     target = int(input("请输入目标值："))
-    ans = Solution().twoSum2(nums, target)
+    ans = Solution().twoSumii(nums, target)
     print("下标：", ans)

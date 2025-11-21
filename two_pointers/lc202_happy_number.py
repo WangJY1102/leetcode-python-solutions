@@ -31,6 +31,7 @@ class Solution:
 
     def happy_number2(self, n: int) -> bool:
         """
+        判断 n 是否为快乐数。
         使用快慢指针检测环；非快乐数必会进入 4→16→37→... 循环。
         问题就可以转换为检测一个链表是否有环，慢速在链表中前进 1 个节点，快跑者前进 2 个节点
 
@@ -52,6 +53,7 @@ class Solution:
                 total += digit ** 2
             return total
 
+        # 快慢指针
         slow_runner = n
         fast_runner = get_next(n)
         while fast_runner != 1 and fast_runner != slow_runner:
